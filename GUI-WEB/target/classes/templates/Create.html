@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<style>
+    div{
+        font-size: 18px;
+        font-family: "Yu Gothic",serif;
+        margin: 10px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Create Element</title>
+</head>
+<body>
+
+<form th:action="success" th:object="${submittedform}" th:method="post">
+
+    <div>  <label>Name of the element <input type="text" th:field="*{name}"></label> </div>
+
+    <div>  <label>Atomic number of this element <input type="number" th:field="*{atomicNumber}"></label></div>
+
+        <div>  <label>When was this element discovered <input type="number" th:field="*{dateOfDiscovery}"></label></div>
+
+            <div>   <label>Who found this element (full name) <input type="text" th:field="*{nameOfFounder}"></label></div>
+
+                <div>  <label>What is the color of this element <input type="text" th:field="*{color}"></label></div>
+
+                    <div>   <label>What industries is this element used in list with (,) in between <input type="text" th:field="*{related_Industries}"></label></div>
+
+                        <div>   <button type="submit">Submit</button></div>
+
+</form>
+
+
+
+
+</body>
+</html>
